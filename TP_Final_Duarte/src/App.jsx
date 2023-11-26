@@ -7,7 +7,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    // Puedes cargar tareas desde localStorage o cualquier fuente de datos aquí
+   
   }, []);
 
   const addTask = (newTask) => {
@@ -15,12 +15,12 @@ function App() {
   };
 
   const completeTask = (taskId) => {
-    // Marcar tarea como completada (actualizar el estado según tu lógica)
+    
     setTasks(tasks.map((task) => (task.id === taskId ? { ...task, completed: true } : task)));
   };
 
   const deleteTask = (taskId) => {
-    // Eliminar tarea (actualizar el estado según tu lógica)
+    
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
 

@@ -1,6 +1,6 @@
 // TaskForm.jsx
 import React, { useState } from 'react';
-import './TaskForm.css'; // Importar el archivo de estilos
+import './TaskForm.css'; 
 
 const TaskForm = ({ addTask }) => {
   const [taskName, setTaskName] = useState('');
@@ -11,7 +11,7 @@ const TaskForm = ({ addTask }) => {
 
   const handleAddTask = () => {
     if (!taskName.trim()) {
-      return; // Evitar agregar tareas vacías
+      return; 
     }
     addTask({ id: Date.now(), name: taskName, completed: false });
     setTaskName('');

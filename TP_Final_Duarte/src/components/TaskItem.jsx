@@ -3,7 +3,7 @@ import React from 'react';
 
 const TaskItem = ({ task, completeTask, deleteTask }) => {
   const handleComplete = () => {
-    completeTask(task.id, !task.completed); // Pasar el nuevo estado directamente
+    completeTask(task.id, !task.completed); 
   };
 
   const handleDelete = () => {
