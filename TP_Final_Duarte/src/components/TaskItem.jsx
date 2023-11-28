@@ -1,5 +1,6 @@
 // TaskItem.jsx
 import React from 'react';
+import { ButtonAction } from './ButtonAction';
 
 const TaskItem = ({ task, completeTask, deleteTask }) => {
   const handleComplete = () => {
@@ -13,8 +14,10 @@ const TaskItem = ({ task, completeTask, deleteTask }) => {
   return (
     <li className={task.completed ? 'completed' : ''}>
       {task.name}
-      <button onClick={handleComplete}>Completar</button>
-      <button onClick={handleDelete}>Eliminar</button>
+      
+      <ButtonAction handleAction={handleComplete} description="Completar"/>
+      <ButtonAction handleAction={handleDelete} description="Eliminar"/>
+      
     </li>
   );
 };
